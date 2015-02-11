@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Calendar</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="jquery-1.11.2.js"></script>
+		<script src="main.js"></script>
+	</head>
+
+		
+
+	<body>
+
+		<div id="wrapper">
+			<form name="login-form" class="login-form" action="handleEvent.php" method="GET">
+			
+				<div class="header">
+					<h1>Add new note</h1>
+				</div>
+				<div class="content">
+					<input name="title" type="text" class="input username" required="required"/>
+					<input name="data" type="text" class="input password"  required="required"/>
+					<select name="day">
+						    <option value=1>sunday</option>
+						    <option value=2>monday</option>
+						    <option value=3>tuesday</option>
+						    <option value=4>wednsday</option>
+						    <option value=5>thursday</option>
+						    <option value=6>friday</option>
+						    <option value=7>saturday</option>
+					  	</select>		
+				</div>
+				<div class="footer">
+				<input type="submit" id="registerButton" name="newEvent" value="Create" class="button" />
+				</div>
+			</form>
+			<button class="close" >X</button>
+		</div>
+		<div class="gradient"></div>
+	</body>
+</html>
