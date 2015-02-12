@@ -115,4 +115,8 @@
 		header('Location:login.php');
 	}
 
-	
+	function getUser($id){
+		$query = "SELECT email,dob,password FROM users WHERE id = '$id'";
+		$user=getQuery($query);
+		echo json_encode($user[0]);
+	}

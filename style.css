@@ -21,8 +21,9 @@ a{
 	text-align: center;
 }
 #calender{
-	width: 1064px;
+	width: 1200px;
 	margin: 0 auto;	
+
 }
 .day_label{
 	margin-left: 2px;

@@ -38,6 +38,17 @@ $('document').ready(function(){
 		});
 	$('#updateUser').on('click',function(){
 		$('#popupUpdateUser').show();
+		var Id =  document.cookie;
+		var userId = Id.substr(3,2);
+		console.log(userId);
+		$.getJSON( "handleUsers.php",{id:userId})
+		.done(function(data){
+			console.log(data);
+
+			$("#popupEmail").val(data.email);
+			$("#popupAge").val(data.dob);
+		});
+
 	});
 	
 	$('.close').on('click',function(){
@@ -47,6 +58,7 @@ $('document').ready(function(){
 		event.stopPropagation();
 		var noteid = $(this).closest("span").attr("noteId");
 		$.getJSON( "handleEvent.php", { id:noteid } );
+
 		
 		$(".note[noteId="+noteid+"]").remove();
 		
